@@ -99,9 +99,13 @@ document.getElementById('travelForm').addEventListener('submit', function(e) {
     e.preventDefault();
    
     x2= "I want to go to"
+    i = 0;
+    let addresses=[];
     x.forEach(item => {
       if(document.getElementById("attraction-"+item.name).checked){
         x2+= ","+item.name
+        addresses[i]= item.address
+        i++
 
 
 
