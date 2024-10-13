@@ -2,15 +2,15 @@
   /* Options */
 
   var creatives = [
-    {"title": "Join the Cerebral Beach Hackathon!!!", "creative": "cerebral.png", "href": "https://hack.cerebralbeach.com/"},
-    {"title": "Get started with Kindo AI!!!", "creative": "kindo.jpeg", "href": "https://kindo.ai/"},
-    {"title": "The #1 uncensored, open source AI model for cybersecurity.", "creative": "whiteRabbit.png", "href": "https://www.whiterabbitneo.com/sign-in?callbackUrl=/"},
-    {"title": "Multimodal AI that understands videos like humans", "image": "twelveLabs.png", "href": "https://www.twelvelabs.io/"},
-    {"title": "Vast.ai is the market leader in low-cost cloud GPU rental.", "image": "vastAI.png", "href": "https://vast.ai/?utm_source=googleads&utm_id=circleclick.com&gad_source=1&gclid=CjwKCAjwvKi4BhABEiwAH2gcw0vtDzlrLtjqMN7jaCvdZo5Gz5zSDE2ZsxXIHyvfsggYNlpL791w2xoCV0gQAvD_BwE"},
-    {"title": "Search the world's information, including webpages, images, videos and more.", "image": "google.jpg", "href": "https://www.google.com/"},
-    {"title": "Representing the Pioneers and Disruptors Associated with Market-Changing Innovation in Technology and Life Sciences", "image": "wilson.png", "href": "https://www.wsgr.com/en//"},
-    {"title": "We drive brand value with technology, transformative storytelling, immersive events, communication management and marketing logistics.", "image": "john.png", "href": "https://john-weston.com/"},
-    {"title": "The best way to reach humans instead of spam folders. Deliver transactional and marketing emails at scale.", "image": "resend.png", "href": "https://resend.com/"},
+    {"title": "Join the Cerebral Beach Hackathon!!!", "creative": "images/cerebral.png", "href": "https://hack.cerebralbeach.com/"},
+    {"title": "Get started with Kindo AI!!!", "creative": "images/kindo.jpeg", "href": "https://kindo.ai/"},
+    {"title": "The #1 uncensored, open source AI model for cybersecurity.", "creative": "images/whiteRabbit.png", "href": "https://www.whiterabbitneo.com/sign-in?callbackUrl=/"},
+    {"title": "Multimodal AI that understands videos like humans", "image": "images/twelveLabs.png", "href": "https://www.twelvelabs.io/"},
+    {"title": "Vast.ai is the market leader in low-cost cloud GPU rental.", "image": "images/vastAI.png", "href": "https://vast.ai/?utm_source=googleads&utm_id=circleclick.com&gad_source=1&gclid=CjwKCAjwvKi4BhABEiwAH2gcw0vtDzlrLtjqMN7jaCvdZo5Gz5zSDE2ZsxXIHyvfsggYNlpL791w2xoCV0gQAvD_BwE"},
+    {"title": "Search the world's information, including webpages, images, videos and more.", "image": "images/google.jpg", "href": "https://www.google.com/"},
+    {"title": "Representing the Pioneers and Disruptors Associated with Market-Changing Innovation in Technology and Life Sciences", "image": "images/wilson.png", "href": "https://www.wsgr.com/en//"},
+    {"title": "We drive brand value with technology, transformative storytelling, immersive events, communication management and marketing logistics.", "image": "images/john.png", "href": "https://john-weston.com/"},
+    {"title": "The best way to reach humans instead of spam folders. Deliver transactional and marketing emails at scale.", "image": "images/resend.png", "href": "https://resend.com/"},
   ];
 
   /* most recently parsed script */
