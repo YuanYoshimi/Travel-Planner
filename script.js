@@ -1,15 +1,12 @@
-
+let x =""
+let x2 =""
 document.getElementById('travelForm').addEventListener('submit', function(e) {
     e.preventDefault();
   
     const destination = document.getElementById('destination').value;
-    const startDate = document.getElementById('startDate').value;
-    const startTime = document.getElementById('startTime').value;
-    const endDate = document.getElementById('endDate').value;
-    const endTime = document.getElementById('endTime').value;
+    
     const preferences = document.getElementById('preferences').value;
-    x= "";
-  
+    
     const paragraph ="Give me the top 10 attractions in "+ destination+ " with these preferences "+ preferences+" and im not giving you more information so you have to give me an output. YOU CAN NOT ASK FOR MORE INFORMATION AND DO NOT PUT EXTRA STUFF AROUND THE LIST. Format dictionaries like the following (all in the format of a java list but not in actual code. That means only 1 pair of closed square brackets[]for the list and 10 pairs of {} for the dictionary): 'name': name, 'description': description, 'address': address, 'rating': rating, 'time': time, 'website': website"
     // Example of a basic itinerary (replace this with your AI integration logic)
     const itinerary = `
@@ -57,7 +54,7 @@ document.getElementById('travelForm').addEventListener('submit', function(e) {
         dictionary["rating"] = x[i].substring(x[i].indexOf("rating")+9,x[i].indexOf(",",x[i].indexOf("rating")+9));
       }
       dictionary["time"] = x[i].substring(x[i].indexOf("time")+8,x[i].indexOf("'",x[i].indexOf("time")+8+5));
-      dictionary["website"] = x[i].substring(x[i].indexOf("website")+11,x[i].indexOf("'",x[i].indexOf("website")+11+5));
+      dictionary["website"] = x[i].substring(x[i].indexOf("website")+11,x[i].indexOf("'",x[i].indexOf("website")+11+1));
   
       x[i]=dictionary;
   
@@ -82,16 +79,60 @@ document.getElementById('travelForm').addEventListener('submit', function(e) {
             <hr>
         `;
     });
-    
+   
+  
+  
+    button= '<button  type="submit" class="btn">Make schedule</button>'
     
     
   
     // Display the generated itinerary in the HTML
     document.getElementById('itineraryContent').innerHTML = itineraryHTML;
+    document.getElementById('schedule').innerHTML= button;
+
   });
     
   
   });
   
+  document.getElementById('schedule').addEventListener('submit', function(e) {
+    e.preventDefault();
+   
+    x2= "I want to go to"
+    x.forEach(item => {
+      if(document.getElementById("attraction-"+item.name).checked){
+        x2+= ","+item.name
+
+
+
+      }
+    });
+    const startDate = document.getElementById('startDate').value;
+    const startTime = document.getElementById('startTime').value;
+    const endDate = document.getElementById('endDate').value;
+    const endTime = document.getElementById('endTime').value;
+
+    x2 += " make me a schedule for me. Im going from "+startDate+" at "+ startTime + " to " + endDate + " at " + endTime+". YOU WILL NOT RECIEVE MORE INFO AND YOU MUST RESPOND WITH A SCHEDULE";
+    const settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCpBXvGtjLaBaX--Smflw-lPNoz1nlIH1Q",
+      "method": "POST",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "processData": false,
+      "data": "{\"contents\":[{\"parts\":[{\"text\":\""+x2+"\"}]}]}"
+    };
   
+  
+    
+    $.ajax(settings).done(function (response) {
+      res = response.candidates[0].content.parts[0].text;
+      console.log(res);
+
+
+      
+    });
+  });
       
