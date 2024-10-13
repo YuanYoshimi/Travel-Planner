@@ -1,0 +1,166 @@
+/* General styles for the whole page */
+body {
+    font-family: 'Poppins', sans-serif; /* Font style for the entire website */
+    background-color: #000000; /* Black background color for the entire page */
+    color: #eaeaea; /* Light text color for the page */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Flexbox for centering content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Container that wraps the entire content */
+.container {
+    width: 100%; /* Full width of the container */
+    max-width: 700px; /* Maximum width of the content */
+    padding: 20px; /* Padding inside the container */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    background-color: #1a1a1a; /* Dark background color for the container */
+    border-radius: 12px; /* Rounded corners */
+    margin: 20px; /* Margin outside the container */
+}
+
+/* Styles for the image container section */
+.image-container {
+    position: relative; /* Allows for absolute positioning of text overlay */
+    background-image: url('background.jpg'); /* Corrected path for your background image */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 100%; /* Full width of the container */
+    height: 400px; /* Fixed height of the image container */
+    border-radius: 12px; /* Rounded corners for the image */
+}
+
+/* Styles for the text that overlays the image */
+.text-overlay {
+    position: absolute; /* Absolutely positions the text over the image */
+    top: 50%; /* Centers the text vertically */
+    left: 50%; /* Centers the text horizontally */
+    transform: translate(-50%, -50%); /* Ensures perfect centering */
+    text-align: center; /* Centers the text inside the overlay */
+    color: #ffffff; /* White color for the overlay text */
+}
+
+/* Styles for the h1 heading inside the text overlay */
+.text-overlay h1 {
+    font-size: 3.3rem; /* Large font size for the main heading */
+    margin: 0; /* Remove default margin */
+}
+
+/* Styles for the paragraph text inside the text overlay */
+.text-overlay h2 {
+    font-size: 1.2rem; /* Font size for the subheading text */
+    margin-top: 140px; /* Adds spacing above the paragraph */
+}
+/* Form styles */
+.input-form {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    max-width: 600px; /* Set a maximum width for the form */
+    margin-top: 20px; /* Adds spacing above the form */
+    margin-left: auto; /* Center the form horizontally */
+    margin-right: auto; /* Center the form horizontally */
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 7px;
+}
+
+input {
+    width: 100%; /* Ensure the input fields take full width inside the container */
+    max-width: 580px; /* Limit the maximum width of input fields */
+    padding: 12px;
+    border: 1px solid #444444;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #333333;
+    color: #ffffff;
+    transition: border-color 0.3s ease;
+    margin-bottom: 8px; /* Add some space between input fields */
+}
+
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button {
+    width: 100%; /* Make sure the button is still full width */
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Styles for the itinerary section */
+.itinerary {
+    padding: 20px; /* Padding inside the itinerary section */
+    background-color: #2a2a2a; /* Dark background for the itinerary */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect for itinerary section */
+}
+
+/* Styles for the h2 heading in the itinerary section */
+h2 {
+    font-size: 1.5rem; /* Font size for the itinerary heading */
+    color: #ffffff; /* White text for the heading */
+}
+
+/* Styles for the generated itinerary content */
+#itineraryContent {
+    font-size: 1.1rem; /* Font size for itinerary content */
+    color: #dddddd; /* Light gray text for itinerary content */
+}
+
+/* Styles for textarea (preferences) */
+textarea {
+    width: 100%; /* Full width like the input fields */
+    max-width: 580px; /* Ensure consistency with the input fields */
+    padding: 12px; /* Add padding to make it look good */
+    border: 1px solid #444444; /* Same border as input fields */
+    border-radius: 8px; /* Rounded corners like input fields */
+    font-size: 1rem; /* Font size consistent with the other fields */
+    background-color: #333333; /* Same background color as input fields */
+    color: #ffffff; /* White text inside the textarea */
+    transition: border-color 0.3s ease; /* Smooth transition for border focus */
+    margin-bottom: 15px; /* Space below the textarea */
+    resize: vertical; /* Allow vertical resizing but prevent horizontal resizing */
+}
+
+textarea:focus {
+    border-color: #4CAF50; /* Green border on focus to match input fields */
+    outline: none; /* Remove the default focus outline */
+}
+
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 1.75rem; /* Smaller font size for the heading on small screens */
+    }
+
+    button {
+        font-size: 0.9rem; /* Smaller font size for the button on small screens */
+    }
+}

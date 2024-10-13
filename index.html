@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="image-container">
+                <div class="text-overlay">
+                    <h1>Plan Your Perfect Trip</h1>
+                    <h2>Plan your perfect trip by entering the details below!</h2>
+                </div>
+            </div>
+        </header>
+        
+        <section class="input-form">
+            <form id="travelForm">
+                <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" name="destination" placeholder="Enter destination" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="startDate">Start Date</label>
+                    <input type="date" id="startDate" name="startDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="startTime">Start Time</label>
+                    <input type="time" id="startTime" name="startTime" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="endDate">End Date</label>
+                    <input type="date" id="endDate" name="endDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="endTime">End Time</label>
+                    <input type="time" id="endTime" name="endTime" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="preferences">Preferences</label>
+                    <textarea id="preferences" name="preferences" rows="4" placeholder="Enter any specific preferences (e.g., budget, outdoor activities, etc.)"></textarea>
+                </div>
+
+                <button type="submit" class="btn">Generate Itinerary</button>
+            </form>
+        </section>
+
+        <section id="itinerary" class="itinerary">
+            <h2>Your Itinerary</h2>
+            <div id="itineraryContent"></div>
+        </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
