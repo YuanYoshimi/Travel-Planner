@@ -11,8 +11,6 @@
     {"title": "Representing the Pioneers and Disruptors Associated with Market-Changing Innovation in Technology and Life Sciences", "image": "wilson.png", "href": "https://www.wsgr.com/en//"},
     {"title": "We drive brand value with technology, transformative storytelling, immersive events, communication management and marketing logistics.", "image": "john.png", "href": "https://john-weston.com/"},
     {"title": "The best way to reach humans instead of spam folders. Deliver transactional and marketing emails at scale.", "image": "resend.png", "href": "https://resend.com/"},
-    {"title": "JUSTICE FOR BOOGE!!!", "image": "booge.jpeg", "href": "https://www.marshall.usc.edu/departments/lloyd-greif-center-entrepreneurial-studies"}
-
   ];
 
   /* most recently parsed script */
