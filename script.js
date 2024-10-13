@@ -1,5 +1,6 @@
 let x =""
 let x2 =""
+document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('travelForm').addEventListener('submit', function(e) {
     e.preventDefault();
   
@@ -88,55 +89,58 @@ document.getElementById('travelForm').addEventListener('submit', function(e) {
   
     // Display the generated itinerary in the HTML
     document.getElementById('itineraryContent').innerHTML = itineraryHTML;
-    document.getElementById('schedule').innerHTML= button;
+    document.getElementById('scheduleForm').innerHTML= button;
 
   });
     
   
   });
   
-  document.getElementById('schedule').addEventListener('submit', function(e) {
-    e.preventDefault();
-   
-    x2= "I want to go to"
-    i = 0;
-    let addresses=[];
-    x.forEach(item => {
-      if(document.getElementById("attraction-"+item.name).checked){
-        x2+= ","+item.name
-        addresses[i]= item.address
-        i++
-
-
-
-      }
-    });
-    const startDate = document.getElementById('startDate').value;
-    const startTime = document.getElementById('startTime').value;
-    const endDate = document.getElementById('endDate').value;
-    const endTime = document.getElementById('endTime').value;
-
-    x2 += " make me a schedule for me. Im going from "+startDate+" at "+ startTime + " to " + endDate + " at " + endTime+". YOU WILL NOT RECIEVE MORE INFO AND YOU MUST RESPOND WITH A SCHEDULE";
-    const settings = {
-      "async": true,
-      "crossDomain": true,
-      "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCpBXvGtjLaBaX--Smflw-lPNoz1nlIH1Q",
-      "method": "POST",
-      "headers": {
-        "Content-Type": "application/json"
-      },
-      "processData": false,
-      "data": "{\"contents\":[{\"parts\":[{\"text\":\""+x2+"\"}]}]}"
-    };
+  
+    document.getElementById('scheduleForm').addEventListener('submit', function(a) {
+      a.preventDefault();
+      x2= "I want to go to"
+      i = 0;
+      let addresses=[];
+      x.forEach(item => {
+        if(document.getElementById("attraction-"+item.name).checked){
+          x2+= ","+item.name
+          addresses[i]= item.address
+          i++
   
   
+  
+        }
+      });
+      const startDate = document.getElementById('startDate').value;
+      const startTime = document.getElementById('startTime').value;
+      const endDate = document.getElementById('endDate').value;
+      const endTime = document.getElementById('endTime').value;
+  
+      x2 += " make me a schedule for me. Im going from "+startDate+" at "+ startTime + " to " + endDate + " at " + endTime+". YOU WILL NOT RECIEVE MORE INFO AND YOU MUST RESPOND WITH A SCHEDULE";
+      const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCpBXvGtjLaBaX--Smflw-lPNoz1nlIH1Q",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "processData": false,
+        "data": "{\"contents\":[{\"parts\":[{\"text\":\""+x2+"\"}]}]}"
+      };
     
-    $.ajax(settings).done(function (response) {
-      res = response.candidates[0].content.parts[0].text;
-      console.log(res);
-
-
+    
       
+      $.ajax(settings).done(function (response) {
+        const res = response.candidates[0].content.parts[0].text;
+        const formattedSchedule = res.split("\n").map(line => `<p>${line}</p>`).join("");
+        document.getElementById('scheduleForm').innerHTML = formattedSchedule;
+        
+      });
     });
   });
+  
+   
+
       

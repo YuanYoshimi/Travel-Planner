@@ -281,6 +281,20 @@ textarea:focus {
     color: #fff;
 }
 
+.schedule-item {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.schedule-item p {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+
 
 /* Make the page responsive */
 @media (max-width: 768px) {
