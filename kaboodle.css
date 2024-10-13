@@ -1,0 +1,55 @@
+.kaboodle-module {
+  overflow: hidden;
+  margin: 10px auto;
+  text-align: center;
+}
+
+a.kaboodle-header {
+   float: right;
+   text-align: right;
+   margin: 0px 0px 10px 0px;
+   padding: 3px 6px 3px 0px;
+   background-color: #333;
+   font-size: 14px;
+   width: 100%;
+   color: white; /* Header text is white */
+}
+
+.kaboodle-item {
+  display: inline-block;
+  width: 220px;
+  overflow: hidden;
+  margin: 8px 10px 2px 10px;
+  text-align: left;
+}
+
+.kaboodle-item a {
+  color: #fff !important; /* Ensure links are white */
+  text-decoration: none;
+}
+
+.kaboodle-item a:hover {
+  color: #ddd !important; /* Lighter color on hover */
+  text-decoration: underline;
+}
+
+.kaboodle-item p {
+  height: 60px;
+  margin-bottom: 0px;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff !important; /* Ensure text is white */
+}
+
+.kaboodle-item:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.kaboodle-item img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Add some rounding to the image corners */
+  margin-bottom: 10px; /* Space between image and text */
+}
